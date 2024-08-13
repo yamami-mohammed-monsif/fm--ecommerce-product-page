@@ -1,7 +1,7 @@
 function NavBar() {
   return (
     <nav>
-      <ul>
+      <ul className="navigation">
         <li>
           <a href="#">Collections</a>
         </li>

@@ -11,8 +11,10 @@ function Header() {
       </div>
       <NavBar />
       <div className="header-right">
-        <img src={cartIcon} alt="cart-icon" />
-        <img src={avatar} alt="" />
+        <div>
+          <img src={cartIcon} alt="cart-icon" />
+        </div>
+        <img className="avatar" src={avatar} alt="" />
       </div>
     </header>
   );
