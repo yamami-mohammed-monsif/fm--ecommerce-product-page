@@ -44,6 +44,12 @@ a {
   color: inherit;
 }
 
+button {
+  border: 0;
+  font: inherit;
+  background: inherit;
+}
+
 body {
   min-height: 100vh;
   line-height: 1.5;
