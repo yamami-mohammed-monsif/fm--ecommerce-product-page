@@ -2,10 +2,10 @@ function Pricing() {
   return (
     <div className="pricing">
       <div>
-        <p>$125</p>
-        <p>50%</p>
+        <p className="new-price">$125.00</p>
+        <p className="discount">50%</p>
       </div>
-      <p>$250</p>
+      <p className="original-price">$250.00</p>
     </div>
   );
 }

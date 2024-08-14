@@ -11,26 +11,26 @@ function Main(props) {
   const { slides, thumbnails } = props.data;
 
   return (
-    <div>
+    <main>
       <div>
         <Slide slides={slides} />
         <Thumbnails thumbnails={thumbnails} />
       </div>
       <div>
-        <p>sneaker company</p>
+        <p className="company">sneaker company</p>
         <h1>Fall Limited Edition Sneakers</h1>
-        <p>
+        <p className="description">
           These low-profile sneakers are your perfect casual wear companion,
           Featuring a durable rubber outer sole, they'll withstand everything
           the weather can offer.
         </p>
         <Pricing />
-        <div>
+        <div className="actions">
           <QuantityControl plus={plus} minus={minus} />
           <AddToCart icon={cart} />
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

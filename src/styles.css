@@ -38,6 +38,18 @@ picture {
   display: block;
 }
 
+input {
+  font: inherit;
+  color: inherit;
+  background: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   font: inherit;
@@ -58,10 +70,11 @@ body {
   font-size: var(--fs-400);
   font-weight: var(--fw-regular);
   color: var(--clr-neutral-400);
+  padding-bottom: 5rem;
 }
 
 .container {
-  width: 80%;
+  width: min(80%, 1440px);
   margin-inline: auto;
 }
 
@@ -70,11 +83,18 @@ body {
 header {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
   gap: 2rem;
 
   padding-block: 2rem;
+  margin-bottom: 5rem;
   border-bottom: 1px solid var(--clr-neutral-300);
+}
+
+.menu-icon {
+  display: none;
+  width: 1.3rem;
 }
 
 .navigation {
@@ -86,10 +106,200 @@ header {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: clamp(1rem, 3vw, 3rem);
   justify-self: end;
 }
 
 .avatar {
   width: 2.5rem;
+}
+
+/* main */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 90%;
+  margin-inline: auto;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  color: var(--clr-neutral-800);
+}
+
+.company {
+  font-size: 0.9rem;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-top: clamp(1rem, 2vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+/* pricing */
+
+.pricing {
+  margin-bottom: 2rem;
+}
+
+.pricing > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.new-price {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-800);
+}
+
+.discount {
+  background-color: var(--clr-neutral-800);
+  color: var(--clr-neutral-100);
+  font-size: 0.9rem;
+  font-weight: var(--fw-bold);
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.original-price {
+  font-weight: var(--fw-bold);
+  text-decoration: line-through;
+}
+
+/* actions */
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  background-color: var(--clr-primary-orange);
+  color: var(--clr-neutral-800);
+  font-weight: var(--fw-bold);
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: var(--clr-neutral-200);
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.quantity-display {
+  color: var(--clr-neutral-800);
+  font-weight: var(--fw-bold);
+  width: 2rem;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+/* slides */
+
+main > div:first-child {
+  width: 75%;
+}
+
+.slides-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.slide {
+  border-radius: 1rem;
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.thumbnails-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.thumbnail {
+  width: 20%;
+  border-radius: 0.8rem;
+}
+
+@media (max-width: 860px) {
+  .container {
+    width: 90%;
+  }
+
+  header {
+    grid-template-columns: 0.1fr 1fr 0.5fr;
+    border: 0;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .logo-container {
+    grid-column: 2;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navigation {
+    position: fixed;
+    inset: 0 30% 0 0;
+    background-color: paleturquoise;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-top: 4rem;
+    padding-left: 2rem;
+
+    transform: translateX(-100%);
+    transition: all ease-out;
+  }
+
+  .header-right {
+    grid-column: 3;
+    grid-row: 1;
+    /* justify-self: start; */
+  }
+
+  main {
+    display: block;
+    width: 100%;
+  }
+
+  main > div:first-child {
+    width: 100%;
+  }
+
+  .thumbnails-container {
+    display: none;
+  }
 }

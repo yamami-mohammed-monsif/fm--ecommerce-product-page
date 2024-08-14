@@ -1,6 +1,6 @@
 function AddToCart(props) {
   return (
-    <button>
+    <button className="add-to-cart">
       <img src={props.icon} alt="cart-icon" />
       <span>Add to cart</span>
     </button>
