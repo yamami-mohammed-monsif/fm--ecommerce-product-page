@@ -16,6 +16,7 @@ function Header() {
       } else return "closed";
     });
   }
+  document.body.style.overflow = visible ? "hidden" : "auto";
 
   return (
     <header>
