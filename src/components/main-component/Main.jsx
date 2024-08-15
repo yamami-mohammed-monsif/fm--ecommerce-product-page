@@ -2,7 +2,6 @@ import minus from "../../../images/icon-minus.svg";
 import plus from "../../../images/icon-plus.svg";
 import cart from "../../../images/icon-cart.svg";
 import Slide from "./Slide";
-import Thumbnails from "./Thumbnails";
 import AddToCart from "./AddToCart";
 import QuantityControl from "./QuantityControl";
 import Pricing from "./Pricing";
@@ -13,8 +12,7 @@ function Main(props) {
   return (
     <main>
       <div>
-        <Slide slides={slides} />
-        <Thumbnails thumbnails={thumbnails} />
+        <Slide slides={slides} thumbnails={thumbnails} />
       </div>
       <div>
         <p className="company">sneaker company</p>

@@ -230,6 +230,8 @@ main > div:first-child {
   align-items: center;
   justify-content: center;
   margin-bottom: 2.5rem;
+
+  position: relative;
 }
 
 .slide {
@@ -238,6 +240,23 @@ main > div:first-child {
 
 .slide-hidden {
   display: none;
+}
+
+.arrow {
+  position: absolute;
+  padding: 0.7rem 0.8rem;
+  border-radius: 50%;
+  background-color: var(--clr-neutral-100);
+
+  display: none;
+}
+
+.arrow-left {
+  left: 1rem;
+}
+
+.arrow-right {
+  right: 1rem;
 }
 
 .thumbnails-container {
@@ -249,6 +268,11 @@ main > div:first-child {
 .thumbnail {
   width: 20%;
   border-radius: 0.8rem;
+}
+
+.thumbnail-active {
+  border: 3px solid var(--clr-primary-orange);
+  opacity: 50%;
 }
 
 @media (max-width: 860px) {
@@ -322,6 +346,10 @@ main > div:first-child {
   }
   .slide {
     border-radius: 0;
+  }
+
+  .arrow {
+    display: block;
   }
 
   .thumbnails-container {
