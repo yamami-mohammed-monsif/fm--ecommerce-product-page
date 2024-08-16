@@ -1,9 +1,12 @@
 import { useState } from "react";
 import next from "../../../images/icon-next.svg";
 import previous from "../../../images/icon-previous.svg";
+import close from "../../../images/icon-close.svg";
+import Modal from "./Modal";
 
 function Slide(props) {
   const [slide, setSlide] = useState(0);
+  const [openModal, setOpenModal] = useState(false);
 
   function nextSlide() {
     setSlide(slide === props.slides.length - 1 ? 0 : slide + 1);
@@ -13,8 +16,27 @@ function Slide(props) {
     setSlide(slide === 0 ? props.slides.length - 1 : slide - 1);
   }
 
+  function hanldeOpenModal() {
+    setOpenModal(true);
+  }
+
+  function handleCloseModal() {
+    setOpenModal(false);
+  }
+
   return (
     <div>
+      {openModal && (
+        <Modal
+          slides={props.slides}
+          thumbnails={props.thumbnails}
+          slideNumber={slide}
+          next={nextSlide}
+          previous={previousSlide}
+          onCloseModal={handleCloseModal}
+        />
+      )}
+
       <div className="slides-container">
         <img
           src={previous}
@@ -26,9 +48,10 @@ function Slide(props) {
           return (
             <img
               src={item.src}
-              alt={item.src}
+              alt={item.alt}
               key={item.id}
               className={slide === index ? "slide" : "slide-hidden"}
+              onClick={() => hanldeOpenModal(index)}
             />
           );
         })}

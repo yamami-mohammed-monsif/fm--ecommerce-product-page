@@ -20,6 +20,7 @@ function Header() {
 
   return (
     <header>
+      {visible && <div className="overlay"></div>}
       <button
         className="menu-btn"
         aria-controls="navigationBar"
