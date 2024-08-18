@@ -3,9 +3,9 @@ import logo from "../../../images/logo.svg";
 import NavBar from "./NavBar";
 import cartIcon from "../../../images/icon-cart.svg";
 import avatar from "../../../images/image-avatar.png";
-import menuIcon from "../../../images/icon-menu.svg";
+import Cart from "../main-component/Cart";
 
-function Header() {
+function Header(props) {
   const [visible, setVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState("closed");
   function handleClick() {
@@ -17,6 +17,11 @@ function Header() {
     });
   }
   document.body.style.overflow = visible ? "hidden" : "auto";
+
+  const [cartVisible, setCartVisible] = useState(false);
+  function showCart() {
+    setCartVisible(!cartVisible);
+  }
 
   return (
     <header>
@@ -32,8 +37,17 @@ function Header() {
       </div>
       <NavBar id="navigationBar" dataVisible={visible} />
       <div className="header-right">
-        <div>
-          <img src={cartIcon} alt="cart-icon" />
+        <div className="cart-icon-container">
+          <span className="units-number">
+            {props.addClicked && props.quantity}
+          </span>
+          <img
+            src={cartIcon}
+            alt="cart-icon"
+            className="cart-icon"
+            onClick={showCart}
+          />
+          {cartVisible && <Cart quantity={props.quantity} />}
         </div>
         <img className="avatar" src={avatar} alt="" />
       </div>

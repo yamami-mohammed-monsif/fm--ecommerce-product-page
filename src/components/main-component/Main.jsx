@@ -1,5 +1,3 @@
-import minus from "../../../images/icon-minus.svg";
-import plus from "../../../images/icon-plus.svg";
 import cart from "../../../images/icon-cart.svg";
 import Slide from "./Slide";
 import AddToCart from "./AddToCart";
@@ -24,8 +22,8 @@ function Main(props) {
         </p>
         <Pricing />
         <div className="actions">
-          <QuantityControl plus={plus} minus={minus} />
-          <AddToCart icon={cart} />
+          <QuantityControl getQuantity={props.handleQuantity} />
+          <AddToCart icon={cart} onAddClicked={props.onAddClicked} />
         </div>
       </div>
     </main>
