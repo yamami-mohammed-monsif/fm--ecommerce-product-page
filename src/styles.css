@@ -453,6 +453,13 @@ main > div:first-child {
     grid-row: 1;
   }
 
+  .cart {
+    transform: translateX(0);
+    left: -16.5rem;
+  }
+
+  /* main */
+
   main {
     display: block;
     width: 100%;
