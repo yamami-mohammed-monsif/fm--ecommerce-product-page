@@ -28,14 +28,14 @@ function QuantityControl(props) {
 
   return (
     <div className="quantity-control">
-      <img src={minus} alt="minus-icon" onClick={decrease} />
+      <img src={minus} alt="minus-icon" className="minus" onClick={decrease} />
       <input
         type="number"
         className="quantity-display"
         onChange={handleQuantity}
         value={quantity}
       />
-      <img src={plus} alt="plus-icon" onClick={increase} />
+      <img src={plus} alt="plus-icon" className="plus" onClick={increase} />
     </div>
   );
 }

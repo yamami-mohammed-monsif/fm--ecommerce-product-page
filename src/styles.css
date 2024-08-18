@@ -97,6 +97,7 @@ header {
   width: 1.5rem;
   aspect-ratio: 1 / 1;
   margin-top: 0.3rem;
+  cursor: pointer;
 }
 
 .navigation {
@@ -114,6 +115,12 @@ header {
 
 .avatar {
   width: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.avatar:hover {
+  border: solid var(--clr-primary-orange) 2px;
 }
 
 .overlay {
@@ -125,6 +132,10 @@ header {
 
 .cart-icon-container {
   position: relative;
+}
+
+.cart-icon {
+  cursor: pointer;
 }
 
 .units-number {
@@ -184,6 +195,7 @@ header {
 
 .cart .delete {
   width: 1rem;
+  cursor: pointer;
 }
 
 .cart .total-price {
@@ -198,6 +210,11 @@ header {
   width: 100%;
   padding: 0.8rem 0;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.cart .chekout:hover {
+  opacity: 80%;
 }
 
 /* main */
@@ -282,6 +299,11 @@ h1 {
   font-weight: var(--fw-bold);
   padding: 1rem 0;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  opacity: 80%;
 }
 
 .quantity-control {
@@ -292,6 +314,11 @@ h1 {
   background-color: var(--clr-neutral-200);
   padding: 1rem 0;
   border-radius: 0.5rem;
+}
+
+.plus,
+.minus {
+  cursor: pointer;
 }
 
 .quantity-display {
@@ -320,6 +347,7 @@ main > div:first-child {
 
 .slide {
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .slide-hidden {
@@ -331,6 +359,7 @@ main > div:first-child {
   padding: 0.7rem 0.8rem;
   border-radius: 50%;
   background-color: var(--clr-neutral-100);
+  cursor: pointer;
 
   display: none;
 }
@@ -340,6 +369,7 @@ main > div:first-child {
   position: absolute;
   right: 0.5rem;
   top: -2rem;
+  cursor: pointer;
 }
 
 .arrow-left {
@@ -359,6 +389,7 @@ main > div:first-child {
 .thumbnail {
   width: 20%;
   border-radius: 0.8rem;
+  cursor: pointer;
 }
 
 .thumbnail-active {
