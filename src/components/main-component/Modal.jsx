@@ -1,6 +1,6 @@
-import next from "../../../images/icon-next.svg";
-import previous from "../../../images/icon-previous.svg";
-import close from "../../../images/icon-close.svg";
+import next from "../../../public/images/icon-next.svg";
+import previous from "../../../public/images/icon-previous.svg";
+import close from "../../../public/images/icon-close.svg";
 
 function Modal(props) {
   return (

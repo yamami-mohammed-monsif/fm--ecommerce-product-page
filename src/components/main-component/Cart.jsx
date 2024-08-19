@@ -1,6 +1,6 @@
 import { useState } from "react";
-import productImg from "../../../images/image-product-1-thumbnail.jpg";
-import deleteIcon from "../../../images/icon-delete.svg";
+import productImg from "../../../public/images/image-product-1-thumbnail.jpg";
+import deleteIcon from "../../../public/images/icon-delete.svg";
 
 function Cart(props) {
   const [orders, setOrders] = useState(["Fall Limited Edition Sneakers"]);

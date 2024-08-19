@@ -1,8 +1,8 @@
 import { useState } from "react";
-import logo from "../../../images/logo.svg";
+import logo from "../../../public/images/logo.svg";
 import NavBar from "./NavBar";
-import cartIcon from "../../../images/icon-cart.svg";
-import avatar from "../../../images/image-avatar.png";
+import cartIcon from "../../../public/images/icon-cart.svg";
+import avatar from "../../../public/images/image-avatar.png";
 import Cart from "../main-component/Cart";
 
 function Header(props) {

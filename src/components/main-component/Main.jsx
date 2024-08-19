@@ -1,4 +1,4 @@
-import cart from "../../../images/icon-cart.svg";
+import cart from "../../../public/images/icon-cart.svg";
 import Slide from "./Slide";
 import AddToCart from "./AddToCart";
 import QuantityControl from "./QuantityControl";

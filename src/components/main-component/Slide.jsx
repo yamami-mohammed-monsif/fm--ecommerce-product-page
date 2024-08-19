@@ -1,7 +1,6 @@
 import { useState } from "react";
-import next from "../../../images/icon-next.svg";
-import previous from "../../../images/icon-previous.svg";
-import close from "../../../images/icon-close.svg";
+import next from "../../../public/images/icon-next.svg";
+import previous from "../../../public/images/icon-previous.svg";
 import Modal from "./Modal";
 
 function Slide(props) {

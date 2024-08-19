@@ -1,6 +1,6 @@
 import { useState } from "react";
-import minus from "../../../images/icon-minus.svg";
-import plus from "../../../images/icon-plus.svg";
+import minus from "../../../public/images/icon-minus.svg";
+import plus from "../../../public/images/icon-plus.svg";
 
 function QuantityControl(props) {
   const [quantity, setQuantity] = useState(0);
